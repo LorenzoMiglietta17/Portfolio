@@ -1,11 +1,20 @@
 
+
+
+import { useState } from 'react';
 import { icons } from './assets/TechIcons';
 import lorenzoImg from './assets/img/lorenzo.jpg';
+import burger1 from './assets/img/burger1.jpg';
+import burger2 from './assets/img/burger2.jpg';
 
 import './App.css';
 
 
 function App() {
+  const [activeBurger, setActiveBurger] = useState(null);
+  const handleBurgerClick = (idx) => {
+    setActiveBurger(activeBurger === idx ? null : idx);
+  };
   return (
     <div className="portfolio-container">
       <div className="animated-bg"></div>
@@ -31,7 +40,22 @@ function App() {
         <h2>Progetti</h2>
         <ul>
           <li>7Burger</li>
-          <img src={lorenzoImg} alt="" />
+          <div className="burger-images-future">
+            <img
+              src={burger1}
+              alt="Burger 1"
+              className={`burger-future${activeBurger === 1 ? ' burger-active' : ''}`}
+              onClick={() => handleBurgerClick(1)}
+              style={{ cursor: 'pointer' }}
+            />
+            <img
+              src={burger2}
+              alt="Burger 2"
+              className={`burger-future${activeBurger === 2 ? ' burger-active' : ''}`}
+              onClick={() => handleBurgerClick(2)}
+              style={{ cursor: 'pointer' }}
+            />
+          </div>
           <li>Progetto 2</li>
           <li>Progetto 3</li>
         </ul>

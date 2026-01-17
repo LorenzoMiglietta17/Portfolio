@@ -1,3 +1,48 @@
+.burger-images-future {
+  display: flex;
+  gap: 32px;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 18px 0 24px 0;
+}
+.burger-future {
+  width: 120px;
+  height: 120px;
+  aspect-ratio: 1/1;
+  border-radius: 18px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 0 32px 0 #00fff7cc, 0 0 12px 2px #1f9cf0cc, 0 2px 16px #000a;
+  border: 2.5px solid #1f9cf0;
+  animation: burgerNeon 2.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: #181818;
+  overflow: hidden;
+}
+.burger-future:hover,
+.burger-future.burger-active {
+  transform: scale(1.18) rotate(-2deg);
+  box-shadow: 0 0 64px 0 #00fff7, 0 0 24px 4px #1f9cf0, 0 4px 32px #000a;
+  border-color: #00fff7;
+  z-index: 2;
+}
+@keyframes burgerNeon {
+  0% {
+    opacity: 0;
+    filter: blur(12px) brightness(0.5);
+    transform: scale(0.7) rotate(8deg);
+  }
+  60% {
+    opacity: 1;
+    filter: blur(2px) brightness(1.2);
+    transform: scale(1.08) rotate(-2deg);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0) brightness(1);
+    transform: scale(1) rotate(0);
+  }
+}
 .about-photo {
   width: 460px;
   height: 460px;
