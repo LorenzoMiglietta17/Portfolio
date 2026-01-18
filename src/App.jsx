@@ -55,6 +55,13 @@ function App() {
               onClick={() => handleBurgerClick(2)}
               style={{ cursor: 'pointer' }}
             />
+            <img
+              src={burger2}
+              alt="Burger 2"
+              className={`burger-future${activeBurger === 2 ? ' burger-active' : ''}`}
+              onClick={() => handleBurgerClick(2)}
+              style={{ cursor: 'pointer' }}
+            />
           </div>
           <li>Progetto 2</li>
           <li>Progetto 3</li>

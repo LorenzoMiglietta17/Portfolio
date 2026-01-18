@@ -44,8 +44,9 @@
   }
 }
 .about-photo {
-  width: 460px;
-  height: 460px;
+  width: clamp(180px, 60vw, 320px);
+  height: auto;
+  aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 4px 24px #0006;
@@ -56,7 +57,7 @@
 }
 /* Tech Scroll Section */
 .tech-scroll-section {
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   background: #23272f;
   padding: 36px 0 36px 0;
@@ -67,7 +68,7 @@
   z-index: 10;
 }
 .tech-scroll-wrapper {
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
 }
 .tech-scroll {
@@ -150,7 +151,7 @@
 /* Tech Scroll Section */
 
 .tech-scroll-section {
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   background: #23272f;
   padding: 36px 0 36px 0;
@@ -161,7 +162,7 @@
   z-index: 10;
 }
 .tech-scroll-wrapper {
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
 }
 .tech-scroll {
@@ -251,8 +252,8 @@ body {
 
 .portfolio-container {
   min-height: 100vh;
-  min-width: 100vw;
-  width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -319,7 +320,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem 2rem;
+  padding: 1.2rem 1.6rem;
   background: #11224d;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   position: sticky;
@@ -340,7 +341,7 @@ body {
 }
 /* LOGO 3D INNOVATIVO */
 .logo {
-  font-size: 2.5rem;
+  font-size: clamp(1.25rem, 2.5vw + 1rem, 2.5rem);
   font-weight: bold;
   color: #000000;
   letter-spacing: 2.5px;
@@ -439,7 +440,7 @@ body {
 }
 
 .section {
-  padding: 4rem 2rem 2rem 2rem;
+  padding: 3rem 1.5rem 1.5rem 1.5rem;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -448,7 +449,7 @@ body {
   margin-top: 2rem;
 }
 .home-section h1 {
-  font-size: 2.5rem;
+  font-size: clamp(1.6rem, 3.5vw + 0.8rem, 2.5rem);
   color: #fff;
   animation: welcomeFadeUp 1.5s cubic-bezier(0.23, 1, 0.32, 1);
   opacity: 0;
@@ -495,30 +496,69 @@ body {
 }
 .contact-section p {
   font-size: 1.1rem;
-  }
-
-  .social-section {
-    margin-top: 1.2rem;
-  }
-  .social-section h3 {
-    color: #fff;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-  }
-  .social-icons {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    margin-top: 0.5rem;
-  }
-  .social-icons a img {
-    transition: transform 0.2s, box-shadow 0.2s;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-  }
-  .social-icons a:hover img {
-    transform: scale(1.18);
-    box-shadow: 0 4px 16px #1f9cf0cc;
-  }
 }
+
+.social-section {
+  margin-top: 1.2rem;
+}
+.social-section h3 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+.social-icons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.social-icons a img {
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.social-icons a:hover img {
+  transform: scale(1.18);
+  box-shadow: 0 4px 16px #1f9cf0cc;
+}
+
+/* Generic responsive helpers */
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .tech-scroll { gap: 56px; }
+  .tech-icon svg { width: 68px; height: 68px; }
+  .tech-icon { min-width: 100px; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 2rem 1rem; }
+  .about-section, .projects-section, .contact-section { border-radius: 10px; }
+  .navbar { padding: 1rem 1.2rem; }
+  .burger-images-future { gap: 16px; flex-wrap: wrap; }
+  .burger-future { width: 96px; height: 96px; border-radius: 14px; }
+  .tech-scroll { gap: 40px; }
+  .tech-icon svg { width: 56px; height: 56px; }
+  .tech-icon { min-width: 88px; }
+  .tech-label { font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .section { padding: 1.5rem 0.9rem; }
+  .about-section, .projects-section, .contact-section { border-radius: 8px; }
+  .navbar { padding: 0.9rem 1rem; }
+  .burger-images-future { gap: 12px; }
+  .burger-future { width: 80px; height: 80px; border-radius: 12px; }
+  .tech-scroll { gap: 28px; }
+  .tech-icon svg { width: 44px; height: 44px; }
+  .tech-icon { min-width: 72px; }
+  .tech-label { font-size: 0.95rem; }
+}
+
