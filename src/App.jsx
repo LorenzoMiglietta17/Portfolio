@@ -64,6 +64,21 @@ function App() {
         <h2>Contatti</h2>
         <p>Email: migliolory29@gmail.com</p>
         <p>Telefono: +39 333 97 94 245</p>
+          {/* Sezione Social */}
+          <div className="social-section">
+            <h3>Social</h3>
+            <div className="social-icons">
+              <a href="https://www.linkedin.com/in/lorenzo-miglietta-developer/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" style={{width: '32px', marginRight: '10px'}} />
+              </a>
+              <a href="https://github.com/LorenzoMiglietta17" target="_blank" rel="noopener noreferrer" title="GitHub">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style={{width: '32px', marginRight: '10px'}} />
+              </a>
+              <a href="https://www.instagram.com/lorenzomiglietta._/" target="_blank" rel="noopener noreferrer" title="Instagram">
+                <img src="https://simpleicons.org/icons/instagram.svg" alt="Instagram" style={{width: '32px', marginRight: '10px', background: 'white', borderRadius: '8px'}} />
+              </a>
+            </div>
+          </div>
       </section>
       {/* Sezione a scorrimento con icone */}
       <section className="tech-scroll-section">

@@ -495,4 +495,30 @@ body {
 }
 .contact-section p {
   font-size: 1.1rem;
+  }
+
+  .social-section {
+    margin-top: 1.2rem;
+  }
+  .social-section h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  .social-icons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  .social-icons a img {
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  .social-icons a:hover img {
+    transform: scale(1.18);
+    box-shadow: 0 4px 16px #1f9cf0cc;
+  }
 }

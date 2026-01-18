@@ -1,4 +1,4 @@
-import { SiVscodium, SiLaravel, SiGit, SiHtml5, SiJavascript, SiCss3, SiNodedotjs, SiReact, SiMysql, SiFigma, SiBootstrap, SiTailwindcss } from 'react-icons/si';
+import { SiVscodium, SiLaravel, SiGit, SiHtml5, SiJavascript, SiCss3, SiNodedotjs, SiReact, SiMysql, SiFigma, SiBootstrap, SiTailwindcss, SiPhp } from 'react-icons/si';
 
 export const icons = [
   {
@@ -48,5 +48,9 @@ export const icons = [
   {
     name: 'Tailwind',
     icon: <SiTailwindcss color="#38B2AC" />,
+  },
+  {
+    name: 'PHP',
+    icon: <SiPhp color="#777BB4" />,
   },
 ];
