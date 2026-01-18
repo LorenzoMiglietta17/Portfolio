@@ -6,14 +6,27 @@ import { icons } from './assets/TechIcons';
 import lorenzoImg from './assets/img/lorenzo.jpg';
 import burger1 from './assets/img/burger1.jpg';
 import burger2 from './assets/img/burger2.jpg';
+import burger3 from './assets/img/burger3.jpg';
 
 import './App.css';
 
 
 function App() {
   const [activeBurger, setActiveBurger] = useState(null);
+  const burgerImages = [burger1, burger2, burger3];
+  
   const handleBurgerClick = (idx) => {
-    setActiveBurger(activeBurger === idx ? null : idx);
+    setActiveBurger(idx);
+  };
+
+  const handleCloseModal = () => {
+    setActiveBurger(null);
+  };
+
+  const handleBackdropClick = (e) => {
+    if (e.target === e.currentTarget) {
+      handleCloseModal();
+    }
   };
   return (
     <div className="portfolio-container">
@@ -31,10 +44,14 @@ function App() {
       </section>
       <section id="about" className="section about-section">
         <h2>Chi sono</h2>
-        <img src={lorenzoImg} alt="Lorenzo Miglietta" className="about-photo" />
-        <p>Mi chiamo Lorenzo Miglietta ho studiato come web developer nel 2025 , mi aggiorno sempre sulle nuove tecnologie 
-          sono un sviluppatore web full stack,un appassionato di tecnologia e di sviluppo. Posso creare il progetto dei tuoi sogni 
-          grazie alle mie abilità e competenze.</p>
+        <div className="about-content">
+          <img src={lorenzoImg} alt="Lorenzo Miglietta" className="about-photo" />
+          <p>
+            Mi chiamo Lorenzo Miglietta ho studiato come web developer nel 2025, mi aggiorno sempre sulle nuove tecnologie.
+            Sono uno sviluppatore web full stack e appassionato di tecnologia e sviluppo.
+            Posso creare il progetto dei tuoi sogni grazie alle mie abilità e competenze.
+          </p>
+        </div>
       </section>
       <section id="projects" className="section projects-section">
         <h2>Progetti</h2>
@@ -44,22 +61,22 @@ function App() {
             <img
               src={burger1}
               alt="Burger 1"
-              className={`burger-future${activeBurger === 1 ? ' burger-active' : ''}`}
+              className="burger-future"
               onClick={() => handleBurgerClick(1)}
               style={{ cursor: 'pointer' }}
             />
             <img
               src={burger2}
               alt="Burger 2"
-              className={`burger-future${activeBurger === 2 ? ' burger-active' : ''}`}
+              className="burger-future"
               onClick={() => handleBurgerClick(2)}
               style={{ cursor: 'pointer' }}
             />
             <img
-              src={burger2}
-              alt="Burger 2"
-              className={`burger-future${activeBurger === 2 ? ' burger-active' : ''}`}
-              onClick={() => handleBurgerClick(2)}
+              src={burger3}
+              alt="Burger 3"
+              className="burger-future"
+              onClick={() => handleBurgerClick(3)}
               style={{ cursor: 'pointer' }}
             />
           </div>
@@ -103,6 +120,16 @@ function App() {
       <footer className="footer">
         <p>&copy; {new Date().getFullYear()} Il Mio Portfolio. Tutti i diritti riservati.</p>
       </footer>
+
+      {/* Modal Lightbox */}
+      {activeBurger !== null && (
+        <div className="modal-backdrop" onClick={handleBackdropClick}>
+          <div className="modal-content">
+            <button className="modal-close" onClick={handleCloseModal}>✕</button>
+            <img src={burgerImages[activeBurger - 1]} alt="Progetto" className="modal-image" />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
