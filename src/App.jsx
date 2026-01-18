@@ -7,6 +7,8 @@ import lorenzoImg from './assets/img/lorenzo.jpg';
 import burger1 from './assets/img/burger1.jpg';
 import burger2 from './assets/img/burger2.jpg';
 import burger3 from './assets/img/burger3.jpg';
+import '@google/model-viewer';
+
 
 import './App.css';
 
@@ -106,6 +108,7 @@ function App() {
       </section>
       {/* Sezione a scorrimento con icone */}
       <section className="tech-scroll-section">
+        <h2 className="tech-section-title">Competenze</h2>
         <div className="tech-scroll-wrapper">
           <div className="tech-scroll">
             {icons.concat(icons).map((icon, i) => (
@@ -118,7 +121,7 @@ function App() {
         </div>
       </section>
       <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} Il Mio Portfolio. Tutti i diritti riservati.</p>
+        <p>&copy; {new Date().getFullYear()} Lorenzo Miglietta. Tutti i diritti riservati.</p>
       </footer>
 
       {/* Modal Lightbox */}
