@@ -77,14 +77,14 @@
 }
 .tech-scroll-wrapper {
   width: 100%;
-  overflow: visible;
+  overflow: hidden;
   padding: 20px 0;
 }
 .tech-scroll {
   display: flex;
   align-items: center;
   gap: 80px;
-  animation: tech-scroll-x 14s linear infinite;
+  animation: tech-scroll-x 15s linear infinite;
   will-change: transform;
 }
 .tech-icon {
@@ -172,14 +172,14 @@
 }
 .tech-scroll-wrapper {
   width: 100%;
-  overflow: visible;
+  overflow: hidden;
   padding: 20px 0;
 }
 .tech-scroll {
   display: flex;
   align-items: center;
   gap: 80px;
-  animation: tech-scroll-x 14s linear infinite;
+  animation: tech-scroll-x 15s linear infinite;
   will-change: transform;
 }
 .tech-icon {
