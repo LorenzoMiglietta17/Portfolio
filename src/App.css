@@ -130,7 +130,7 @@
 @keyframes logoWave {
   0% {
     transform: translateY(0) rotateY(0deg) scale(1);
-    color: #000000;
+    color: #fff;
     text-shadow: 0 2px 8px #0a1833, 0 1px 0 #fff, 0 0 16px #000000, 0 0 32px #183a5c99;
   }
   10% {
@@ -140,11 +140,11 @@
   }
   20% {
     transform: translateY(0) rotateY(0deg) scale(1);
-    color: #000000;
+    color: #fff;
   }
   100% {
     transform: translateY(0) rotateY(0deg) scale(1);
-    color: #000000;
+    color: #fff;
   }
 }
 .section {
@@ -509,7 +509,7 @@ body {
 }
 .projects-section li {
   margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 .contact-section p {

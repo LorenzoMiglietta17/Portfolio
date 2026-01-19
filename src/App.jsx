@@ -62,6 +62,7 @@ function App() {
     <h2>Progetti</h2>
     <ul>
     <li>7Burger</li>
+    <p className="project-description">Un progetto vetrina realizzato con Laravel che mostra il menu e i servizi di un fast food. Realizzato con Laravel 12, HTML5, CSS3 e JavaScript per un'esperienza utente moderna e responsive.</p>
     <div className="burger-images-future">
     <img
     src={burger1}
@@ -91,11 +92,27 @@ function App() {
     </section>
     <section id="contact" className="section contact-section">
     <h2>Contatti</h2>
-    <p>Email: migliolory29@gmail.com</p>
-    <p>Telefono: +39 333 97 94 245</p>
+    <p>
+      Mi piacerebbe sentire da te! Che tu abbia una domanda, una proposta di progetto o semplicemente voglia dire ciao, 
+      non esitare a contattarmi. Sono sempre disponibile per discutere di nuove opportunità e collaborazioni.
+    </p>
+    
+    <div className="contact-methods">
+      <div className="contact-item">
+        <h3>📧 Email</h3>
+        <p><a href="mailto:migliolory29@gmail.com">migliolory29@gmail.com</a></p>
+      </div>
+      
+      <div className="contact-item">
+        <h3>📱 Telefono</h3>
+        <p><a href="tel:+393339794245">+39 333 97 94 245</a></p>
+      </div>
+    </div>
+
     {/* Sezione Social */}
     <div className="social-section">
-    <h3>Social</h3>
+    <h3>Seguimi sui Social</h3>
+    <p>Connettiti con me sui principali social network per restare aggiornato sui miei ultimi progetti e articoli.</p>
     <div className="social-icons">
     <a href="https://www.linkedin.com/in/lorenzo-miglietta-developer/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" style={{width: '32px', marginRight: '10px'}} />
