@@ -77,7 +77,8 @@
 }
 .tech-scroll-wrapper {
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
+  padding: 20px 0;
 }
 .tech-scroll {
   display: flex;
@@ -160,7 +161,7 @@
 
 .tech-scroll-section {
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
   background: #23272f;
   padding: 36px 0 36px 0;
   margin: 0;
@@ -171,7 +172,8 @@
 }
 .tech-scroll-wrapper {
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
+  padding: 20px 0;
 }
 .tech-scroll {
   display: flex;
