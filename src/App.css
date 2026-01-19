@@ -77,15 +77,19 @@
 }
 .tech-scroll-wrapper {
   width: 100%;
-  overflow: hidden;
-  padding: 20px 0;
+  overflow-x: hidden;
+  overflow-y: visible;
+  padding: 40px 0;
+  position: relative;
 }
 .tech-scroll {
   display: flex;
   align-items: center;
   gap: 80px;
   animation: tech-scroll-x 15s linear infinite;
+  -webkit-animation: tech-scroll-x 15s linear infinite;
   will-change: transform;
+  width: max-content;
 }
 .tech-icon {
   display: flex;
@@ -172,15 +176,19 @@
 }
 .tech-scroll-wrapper {
   width: 100%;
-  overflow: hidden;
-  padding: 20px 0;
+  overflow-x: hidden;
+  overflow-y: visible;
+  padding: 40px 0;
+  position: relative;
 }
 .tech-scroll {
   display: flex;
   align-items: center;
   gap: 80px;
   animation: tech-scroll-x 15s linear infinite;
+  -webkit-animation: tech-scroll-x 15s linear infinite;
   will-change: transform;
+  width: max-content;
 }
 .tech-icon {
   display: flex;
