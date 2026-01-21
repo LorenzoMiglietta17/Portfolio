@@ -8,13 +8,15 @@ import burger1 from './assets/img/burger1.jpg';
 import burger2 from './assets/img/burger2.jpg';
 import burger3 from './assets/img/burger3.jpg';
 import '@google/model-viewer';
-
+import { useLanguage } from './context/LanguageContext';
 
 import './App.css';
 
 
 function App() {
+  const { language, changeLanguage, t } = useLanguage();
   const [activeBurger, setActiveBurger] = useState(null);
+  const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
   const burgerImages = [burger1, burger2, burger3];
   
   const handleBurgerClick = (idx) => {
@@ -30,39 +32,91 @@ function App() {
       handleCloseModal();
     }
   };
+
+  const handleLanguageChange = (lang) => {
+    changeLanguage(lang);
+    setLanguageMenuOpen(false);
+  };
+
+  const getLanguageFlag = (lang) => {
+    const flags = {
+      it: '🇮🇹',
+      en: '🇬🇧',
+      es: '🇪🇸'
+    };
+    return flags[lang];
+  };
+
+  const getLanguageName = (lang) => {
+    const names = {
+      it: 'IT',
+      en: 'EN',
+      es: 'ES'
+    };
+    return names[lang];
+  };
+
   return (
     <div className="portfolio-container">
     <div className="animated-bg"></div>
+    
+    {/* Language Toggle Button */}
+    <div className="language-selector">
+      <button 
+        className="language-toggle" 
+        onClick={() => setLanguageMenuOpen(!languageMenuOpen)}
+      >
+        {getLanguageFlag(language)} {getLanguageName(language)}
+      </button>
+      {languageMenuOpen && (
+        <div className="language-menu">
+          <button 
+            className={`language-option ${language === 'it' ? 'active' : ''}`}
+            onClick={() => handleLanguageChange('it')}
+          >
+            🇮🇹 Italiano
+          </button>
+          <button 
+            className={`language-option ${language === 'en' ? 'active' : ''}`}
+            onClick={() => handleLanguageChange('en')}
+          >
+            En English
+          </button>
+          <button 
+            className={`language-option ${language === 'es' ? 'active' : ''}`}
+            onClick={() => handleLanguageChange('es')}
+          >
+            🇪🇸 Español
+          </button>
+        </div>
+      )}
+    </div>
+    
     <nav className="navbar">
     <div className="logo logo-3d">
-    {"Lorenzo Miglietta".split("").map((char, i) => (
+    {t.logoName.split("").map((char, i) => (
       <span key={i} className="logo-letter" style={{ animationDelay: `${i * 0.08 + 0.2}s` }}>{char === " " ? "\u00A0" : char}</span>
     ))}
     </div>
     </nav>
     <section id="home" className="section home-section">
-    <h1>Benvenuto nel mio Portfolio</h1>
-    <p>Sviluppatore Web Full Stack Certificato | Web Designer</p>
+    <h1>{t.homeTitle}</h1>
+    <p>{t.homeSubtitle}</p>
     </section>
     <section id="about" className="section about-section">
-    <h2>Chi sono</h2>
+    <h2>{t.aboutTitle}</h2>
     <div className="about-content">
     <img src={lorenzoImg} alt="Lorenzo Miglietta" className="about-photo" />
     <p>
-    "Ciao, sono Lorenzo Miglietta. Sono un Full Stack Web Developer di 23 anni con una forte dedizione
-    all'innovazione. Formatomi nel 2025, ho fatto dell'aggiornamento costante il mio marchio di fabbrica, 
-    integrando sempre le ultime tecnologie nei miei flussi di lavoro.
-    Non mi limito a scrivere codice: trasformo le tue idee in soluzioni digitali concrete e performanti. 
-    Che si tratti di una startup o di un progetto personale, 
-    metto le mie competenze al servizio del tuo obiettivo per costruire insieme il progetto dei tuoi sogni."
+    {t.aboutText}
     </p>
     </div>
     </section>
     <section id="projects" className="section projects-section">
-    <h2>Progetti</h2>
+    <h2>{t.projectsTitle}</h2>
     <ul>
-    <li>7Burger</li>
-    <p className="project-description">Un progetto vetrina realizzato con Laravel che mostra il menu e i servizi di un fast food. Realizzato con Laravel 12, HTML5, CSS3 e JavaScript per un'esperienza utente moderna e responsive.</p>
+    <li>{t.project1Name}</li>
+    <p className="project-description">{t.project1Description}</p>
     <div className="burger-images-future">
     <img
     src={burger1}
@@ -86,33 +140,32 @@ function App() {
     style={{ cursor: 'pointer' }}
     />
     </div>
-    <li>Progetto 2</li>
-    <li>Progetto 3</li>
+    <li>{t.project2Name}</li>
+    <li>{t.project3Name}</li>
     </ul>
     </section>
     <section id="contact" className="section contact-section">
-    <h2>Contatti</h2>
+    <h2>{t.contactTitle}</h2>
     <p>
-      Mi piacerebbe sentire da te! Che tu abbia una domanda, una proposta di progetto o semplicemente voglia dire ciao, 
-      non esitare a contattarmi. Sono sempre disponibile per discutere di nuove opportunità e collaborazioni.
+      {t.contactIntro}
     </p>
     
     <div className="contact-methods">
       <div className="contact-item">
-        <h3>📧 Email</h3>
+        <h3>{t.contactEmail}</h3>
         <p><a href="mailto:migliolory29@gmail.com">migliolory29@gmail.com</a></p>
       </div>
       
       <div className="contact-item">
-        <h3>📱 Telefono</h3>
+        <h3>{t.contactPhone}</h3>
         <p><a href="tel:+393339794245">+39 333 97 94 245</a></p>
       </div>
     </div>
 
     {/* Sezione Social */}
     <div className="social-section">
-    <h3>Seguimi sui Social</h3>
-    <p>Connettiti con me sui principali social network per restare aggiornato sui miei ultimi progetti e articoli.</p>
+    <h3>{t.socialTitle}</h3>
+    <p>{t.socialDescription}</p>
     <div className="social-icons">
     <a href="https://www.linkedin.com/in/lorenzo-miglietta-developer/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" style={{width: '32px', marginRight: '10px'}} />
@@ -128,7 +181,7 @@ function App() {
     </section>
     {/* Sezione a scorrimento con icone */}
     <section className="tech-scroll-section">
-    <h2 className="tech-section-title">Competenze</h2>
+    <h2 className="tech-section-title">{t.techTitle}</h2>
     <div className="tech-scroll-wrapper">
     <div className="tech-scroll">
     {icons.concat(icons).map((icon, i) => (
@@ -141,7 +194,7 @@ function App() {
     </div>
     </section>
     <footer className="footer">
-    <p>&copy; {new Date().getFullYear()} Lorenzo Miglietta. Tutti i diritti riservati.</p>
+    <p>&copy; {new Date().getFullYear()} Lorenzo Miglietta. {t.footerText}</p>
     </footer>
     
     {/* Modal Lightbox */}
