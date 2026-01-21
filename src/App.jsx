@@ -60,6 +60,13 @@ function App() {
     <div className="portfolio-container">
     <div className="animated-bg"></div>
     
+    <nav className="navbar">
+    <div className="logo logo-3d">
+    {t.logoName.split("").map((char, i) => (
+      <span key={i} className="logo-letter" style={{ animationDelay: `${i * 0.08 + 0.2}s` }}>{char === " " ? "\u00A0" : char}</span>
+    ))}
+    </div>
+    
     {/* Language Toggle Button */}
     <div className="language-selector">
       <button 
@@ -80,7 +87,7 @@ function App() {
             className={`language-option ${language === 'en' ? 'active' : ''}`}
             onClick={() => handleLanguageChange('en')}
           >
-            En English
+            🇬🇧 English
           </button>
           <button 
             className={`language-option ${language === 'es' ? 'active' : ''}`}
@@ -90,13 +97,6 @@ function App() {
           </button>
         </div>
       )}
-    </div>
-    
-    <nav className="navbar">
-    <div className="logo logo-3d">
-    {t.logoName.split("").map((char, i) => (
-      <span key={i} className="logo-letter" style={{ animationDelay: `${i * 0.08 + 0.2}s` }}>{char === " " ? "\u00A0" : char}</span>
-    ))}
     </div>
     </nav>
     <section id="home" className="section home-section">

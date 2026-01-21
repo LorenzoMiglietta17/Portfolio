@@ -336,7 +336,7 @@ body {
 
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 1.2rem 1.6rem;
   background: #11224d;
@@ -345,6 +345,7 @@ body {
   top: 0;
   z-index: 10;
   animation: navbarSlideDown 1s cubic-bezier(0.23, 1, 0.32, 1);
+  gap: 1rem;
 }
 
 @keyframes navbarSlideDown {
@@ -359,7 +360,7 @@ body {
 }
 /* LOGO 3D INNOVATIVO */
 .logo {
-  font-size: clamp(1.25rem, 2.5vw + 1rem, 2.5rem);
+  font-size: clamp(1rem, 2.5vw + 0.8rem, 2.5rem);
   font-weight: bold;
   color: #000000;
   letter-spacing: 2.5px;
@@ -377,6 +378,7 @@ body {
   transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
     text-shadow 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   cursor: pointer;
+  flex: 1;
 }
 .logo-3d:hover {
   transform: rotateY(18deg) scale(1.08) translateZ(20px) skewX(-4deg);
@@ -703,26 +705,25 @@ video {
 
 /* Language Toggle Button */
 .language-selector {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
+  position: relative;
+  z-index: 100;
 }
 
 .language-toggle {
   background: linear-gradient(135deg, #1f9cf0 0%, #00fff7 100%);
   border: none;
   border-radius: 50px;
-  padding: 10px 20px;
+  padding: 8px 16px;
   color: #fff;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(31, 156, 240, 0.4);
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  white-space: nowrap;
 }
 
 .language-toggle:hover {
@@ -738,7 +739,7 @@ video {
 
 .language-menu {
   position: absolute;
-  top: 50px;
+  top: calc(100% + 8px);
   right: 0;
   background: rgba(35, 39, 47, 0.98);
   border-radius: 12px;
@@ -789,46 +790,51 @@ video {
 }
 
 @media (max-width: 768px) {
-  .language-selector {
-    top: 15px;
-    right: 15px;
-  }
-  
-  .language-toggle {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
-  
-  .language-menu {
-    top: 45px;
-    min-width: 140px;
-  }
-  
-  .language-option {
-    padding: 10px 14px;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .language-selector {
-    top: 10px;
-    right: 10px;
+  .navbar {
+    padding: 1rem 1.2rem;
+    gap: 0.8rem;
   }
   
   .language-toggle {
     padding: 6px 12px;
     font-size: 0.85rem;
+    gap: 4px;
   }
   
   .language-menu {
-    top: 40px;
     min-width: 130px;
   }
   
   .language-option {
     padding: 9px 12px;
     font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.8rem 1rem;
+    gap: 0.5rem;
+  }
+  
+  .logo {
+    font-size: clamp(0.85rem, 2vw + 0.6rem, 2rem);
+    letter-spacing: 1.5px;
+  }
+  
+  .language-toggle {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    gap: 3px;
+  }
+  
+  .language-menu {
+    min-width: 115px;
+  }
+  
+  .language-option {
+    padding: 8px 10px;
+    font-size: 0.8rem;
   }
 }
 
