@@ -71,6 +71,7 @@
   color: #ffffff;
   font-size: 1.08rem;
 }
+  list-style-position: inside;
 .projects-wrapper {
   display: flex;
   flex-direction: column;
