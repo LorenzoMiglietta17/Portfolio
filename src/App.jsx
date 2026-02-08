@@ -112,37 +112,55 @@ function App() {
     </p>
     </div>
     </section>
+    <section id="how-it-works" className="section how-section">
+    <h2>Come funziona</h2>
+    <ol className="how-list">
+      <li>
+        <strong>Punto 1:</strong> Raccontaci il tuo progetto: proponiamo una breve chiamata per comprendere le tue esigenze e definire lo stile ideale del tuo sito.
+      </li>
+      <li>
+        <strong>Punto 2:</strong> Riceverai un’anteprima gratuita entro 24 ore, che ti presenteremo tramite videochiamata per avvicinarci al sito dei tuoi sogni.
+      </li>
+      <li>
+        <strong>Punto 3:</strong> Una volta completato il lavoro, il tuo sito sarà online entro 48 ore
+      </li>
+    </ol>
+    </section>
     <section id="projects" className="section projects-section">
     <h2>{t.projectsTitle}</h2>
-    <ul>
-    <li>{t.project1Name}</li>
-    <p className="project-description">{t.project1Description}</p>
-    <div className="burger-images-future">
-    <img
-    src={burger1}
-    alt="Burger 1"
-    className="burger-future"
-    onClick={() => handleBurgerClick(1)}
-    style={{ cursor: 'pointer' }}
-    />
-    <img
-    src={burger2}
-    alt="Burger 2"
-    className="burger-future"
-    onClick={() => handleBurgerClick(2)}
-    style={{ cursor: 'pointer' }}
-    />
-    <img
-    src={burger3}
-    alt="Burger 3"
-    className="burger-future"
-    onClick={() => handleBurgerClick(3)}
-    style={{ cursor: 'pointer' }}
-    />
+    <div className="projects-wrapper">
+      <div className="project-card">
+        <div className="project-header">
+          <h3>{t.project1Name}</h3>
+          <p className="project-description">{t.project1Description}</p>
+        </div>
+
+        <div className="mac-gallery">
+          {burgerImages.map((img, idx) => (
+            <button
+              key={img}
+              type="button"
+              className="mac-shot"
+              onClick={() => handleBurgerClick(idx + 1)}
+              aria-label={`Apri immagine progetto ${idx + 1}`}
+            >
+              <div className="mac-window">
+                <div className="mac-toolbar">
+                  <span className="mac-dot mac-dot--red"></span>
+                  <span className="mac-dot mac-dot--yellow"></span>
+                  <span className="mac-dot mac-dot--green"></span>
+                  <span className="mac-title">macOS Preview</span>
+                </div>
+                <div className="mac-screen">
+                  <img src={img} alt={`Burger ${idx + 1}`} className="mac-image" />
+                </div>
+              </div>
+            </button>
+          ))}
+        </div>
+      </div>
+
     </div>
-    <li>{t.project2Name}</li>
-    <li>{t.project3Name}</li>
-    </ul>
     </section>
     <section id="contact" className="section contact-section">
     <h2>{t.contactTitle}</h2>
