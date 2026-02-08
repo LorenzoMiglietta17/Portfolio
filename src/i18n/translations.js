@@ -22,6 +22,15 @@ export const translations = {
     project1Description: "Un progetto vetrina realizzato con Laravel che mostra il menu e i servizi di un fast food. Realizzato con Laravel 12, HTML5, CSS3 e JavaScript per un'esperienza utente moderna e responsive.",
     project2Name: "Progetto 2",
     project3Name: "Progetto 3",
+
+    // How It Works Section
+    howTitle: "Come funziona",
+    howPoint1Title: "Punto 1:",
+    howPoint1Text: "Raccontaci il tuo progetto: proponiamo una breve chiamata per comprendere le tue esigenze e definire lo stile ideale del tuo sito.",
+    howPoint2Title: "Punto 2:",
+    howPoint2Text: "Riceverai un’anteprima gratuita entro 24 ore, che ti presenteremo tramite videochiamata per avvicinarci al sito dei tuoi sogni.",
+    howPoint3Title: "Punto 3:",
+    howPoint3Text: "Una volta completato il lavoro, il tuo sito sarà online entro 48 ore",
     
     // Contact Section
     contactTitle: "Contatti",
@@ -63,6 +72,15 @@ export const translations = {
     project1Description: "A showcase project built with Laravel that displays the menu and services of a fast food restaurant. Built with Laravel 12, HTML5, CSS3 and JavaScript for a modern and responsive user experience.",
     project2Name: "Project 2",
     project3Name: "Project 3",
+
+    // How It Works Section
+    howTitle: "How it works",
+    howPoint1Title: "Step 1:",
+    howPoint1Text: "Tell us about your project: we propose a short call to understand your needs and define the ideal style for your website.",
+    howPoint2Title: "Step 2:",
+    howPoint2Text: "You will receive a free preview within 24 hours, which we will present via video call to get closer to the site of your dreams.",
+    howPoint3Title: "Step 3:",
+    howPoint3Text: "Once the work is completed, your site will be online within 48 hours",
     
     // Contact Section
     contactTitle: "Contact",
@@ -104,6 +122,15 @@ export const translations = {
     project1Description: "Un proyecto de escaparate construido con Laravel que muestra el menú y servicios de un restaurante de comida rápida. Construido con Laravel 12, HTML5, CSS3 y JavaScript para una experiencia de usuario moderna y responsive.",
     project2Name: "Proyecto 2",
     project3Name: "Proyecto 3",
+
+    // How It Works Section
+    howTitle: "Cómo funciona",
+    howPoint1Title: "Paso 1:",
+    howPoint1Text: "Cuéntanos tu proyecto: proponemos una breve llamada para comprender tus necesidades y definir el estilo ideal de tu sitio web.",
+    howPoint2Title: "Paso 2:",
+    howPoint2Text: "Recibirás una vista previa gratuita en 24 horas, que te presentaremos por videollamada para acercarnos al sitio de tus sueños.",
+    howPoint3Title: "Paso 3:",
+    howPoint3Text: "Una vez completado el trabajo, tu sitio estará en línea en 48 horas",
     
     // Contact Section
     contactTitle: "Contacto",

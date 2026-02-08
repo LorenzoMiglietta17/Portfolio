@@ -113,18 +113,21 @@ function App() {
     </div>
     </section>
     <section id="how-it-works" className="section how-section">
-    <h2>Come funziona</h2>
-    <ol className="how-list">
-      <li>
-        <strong>Punto 1:</strong> Raccontaci il tuo progetto: proponiamo una breve chiamata per comprendere le tue esigenze e definire lo stile ideale del tuo sito.
-      </li>
-      <li>
-        <strong>Punto 2:</strong> Riceverai un’anteprima gratuita entro 24 ore, che ti presenteremo tramite videochiamata per avvicinarci al sito dei tuoi sogni.
-      </li>
-      <li>
-        <strong>Punto 3:</strong> Una volta completato il lavoro, il tuo sito sarà online entro 48 ore
-      </li>
-    </ol>
+    <h2>{t.howTitle}</h2>
+    <div className="how-list">
+      <div className="how-item">
+        <h3>{t.howPoint1Title}</h3>
+        <p>{t.howPoint1Text}</p>
+      </div>
+      <div className="how-item">
+        <h3>{t.howPoint2Title}</h3>
+        <p>{t.howPoint2Text}</p>
+      </div>
+      <div className="how-item">
+        <h3>{t.howPoint3Title}</h3>
+        <p>{t.howPoint3Text}</p>
+      </div>
+    </div>
     </section>
     <section id="projects" className="section projects-section">
     <h2>{t.projectsTitle}</h2>

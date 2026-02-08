@@ -45,25 +45,49 @@
   background: radial-gradient(120% 120% at 10% 10%, rgba(79, 146, 255, 0.25), transparent 60%),
               radial-gradient(120% 120% at 90% 0%, rgba(0, 255, 199, 0.18), transparent 55%),
               linear-gradient(160deg, rgba(12, 18, 32, 0.96), rgba(10, 16, 30, 0.92));
-  border: 1px solid rgba(79, 146, 255, 0.35);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 32px rgba(79, 146, 255, 0.2);
   backdrop-filter: blur(10px);
+.how-item {
+  line-height: 1.6;
 }
-.how-list {
-  max-width: 900px;
-  margin: 1rem auto 0 auto;
-  padding: 1rem 1.2rem;
-  display: grid;
-  gap: 14px;
-  color: #d6deea;
+.how-item h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+  gap: 16px;
+  margin: 0;
+  font-size: 1.06rem;
+}
   font-size: 1.08rem;
   background: linear-gradient(160deg, rgba(18, 28, 48, 0.96), rgba(10, 16, 30, 0.92));
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(14, 20, 36, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 10px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   border: 1px solid rgba(255, 255, 255, 0.12);
+.how-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(79, 146, 255, 0.45);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 16px 32px rgba(0, 0, 0, 0.45), 0 0 18px rgba(79, 146, 255, 0.22);
+}
   border-radius: 20px;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(8px);
-}
+  font-size: 1.12rem;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 .how-list li {
+.how-item h3::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4f92ff, #00ffc7);
+  box-shadow: 0 0 10px rgba(0, 255, 199, 0.35);
+}
   line-height: 1.6;
   font-size: 1.06rem;
 }
@@ -71,7 +95,8 @@
   color: #ffffff;
   font-size: 1.08rem;
 }
-  list-style-position: inside;
+  list-style: none;
+  padding-left: 0;
 .projects-wrapper {
   display: flex;
   flex-direction: column;
