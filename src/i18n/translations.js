@@ -9,6 +9,7 @@ export const translations = {
     
     // About Section
     aboutTitle: "Chi sono",
+    aboutCardTitle: "Web Developer e Web Designer",
     aboutText: `"Ciao, sono Lorenzo Miglietta. Sono un Full Stack Web Developer di 23 anni con una forte dedizione
     all'innovazione. Formatomi nel 2025, ho fatto dell'aggiornamento costante il mio marchio di fabbrica, 
     integrando sempre le ultime tecnologie nei miei flussi di lavoro.
@@ -47,6 +48,19 @@ export const translations = {
     
     // Footer
     footerText: "Tutti i diritti riservati.",
+
+    // Cookie Banner
+    cookieTitle: "Cookie",
+    cookieText: "Utilizziamo cookie per migliorare l’esperienza di navigazione. Puoi accettare o rifiutare.",
+    cookieAccept: "Accetta",
+    cookieReject: "Rifiuta",
+    cookieSettingsTitle: "Impostazioni cookie",
+    cookieSettingsChoice: "Scelta:",
+    cookieStatusAccepted: "Accettati",
+    cookieStatusRejected: "Rifiutati",
+    cookieStatusNone: "Non scelto",
+    cookieSettingsOpen: "Apri impostazioni cookie",
+    cookieClose: "Chiudi",
   },
   
   en: {
@@ -59,6 +73,7 @@ export const translations = {
     
     // About Section
     aboutTitle: "About Me",
+    aboutCardTitle: "Web Developer & Web Designer",
     aboutText: `"Hi, I'm Lorenzo Miglietta. I'm a 23-year-old Full Stack Web Developer with a strong dedication
     to innovation. Trained in 2025, I've made constant updating my trademark, 
     always integrating the latest technologies into my workflows.
@@ -97,6 +112,19 @@ export const translations = {
     
     // Footer
     footerText: "All rights reserved.",
+
+    // Cookie Banner
+    cookieTitle: "Cookies",
+    cookieText: "We use cookies to improve your browsing experience. You can accept or decline.",
+    cookieAccept: "Accept",
+    cookieReject: "Decline",
+    cookieSettingsTitle: "Cookie settings",
+    cookieSettingsChoice: "Choice:",
+    cookieStatusAccepted: "Accepted",
+    cookieStatusRejected: "Declined",
+    cookieStatusNone: "Not chosen",
+    cookieSettingsOpen: "Open cookie settings",
+    cookieClose: "Close",
   },
 
   es: {
@@ -109,6 +137,7 @@ export const translations = {
     
     // About Section
     aboutTitle: "Sobre Mí",
+    aboutCardTitle: "Web Developer y Web Designer",
     aboutText: `"Hola, soy Lorenzo Miglietta. Soy un Desarrollador Web Full Stack de 23 años con una fuerte dedicación
     a la innovación. Formado en 2025, he hecho de la actualización constante mi marca distintiva, 
     integrando siempre las últimas tecnologías en mis flujos de trabajo.
@@ -147,5 +176,18 @@ export const translations = {
     
     // Footer
     footerText: "Todos los derechos reservados.",
+
+    // Cookie Banner
+    cookieTitle: "Cookies",
+    cookieText: "Usamos cookies para mejorar tu experiencia de navegación. Puedes aceptar o rechazar.",
+    cookieAccept: "Aceptar",
+    cookieReject: "Rechazar",
+    cookieSettingsTitle: "Configuración de cookies",
+    cookieSettingsChoice: "Elección:",
+    cookieStatusAccepted: "Aceptadas",
+    cookieStatusRejected: "Rechazadas",
+    cookieStatusNone: "Sin elegir",
+    cookieSettingsOpen: "Abrir configuración de cookies",
+    cookieClose: "Cerrar",
   }
 };
