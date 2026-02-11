@@ -2,6 +2,14 @@ export const translations = {
   it: {
     // Navbar
     logoName: "Lorenzo Miglietta",
+
+    // SEO
+    seoSiteName: "Lorenzo Miglietta",
+    seoHomeTitle: "Portfolio Web Developer",
+    seoHomeDescription: "Portfolio di Lorenzo Miglietta, Full Stack Web Developer e Web Designer. Progetti, competenze e contatti.",
+    seoAboutTitle: "Chi sono",
+    seoAboutDescription: "Scopri il profilo di Lorenzo Miglietta, esperienza, competenze e approccio al lavoro.",
+    seoUrl: "https://lmigliettadev.netlify.app",
     
     // Home Section
     homeTitle: "Benvenuto nel mio Portfolio",
@@ -66,6 +74,15 @@ export const translations = {
   en: {
     // Navbar
     logoName: "Lorenzo Miglietta",
+
+    // SEO
+    seoSiteName: "Lorenzo Miglietta",
+    seoHomeTitle: "Web Developer Portfolio",
+    seoHomeDescription: "Portfolio of Lorenzo Miglietta, Full Stack Web Developer and Web Designer. Projects, skills, and contacts.",
+    seoAboutTitle: "About Me",
+    seoAboutDescription: "Learn about Lorenzo Miglietta, experience, skills, and work approach.",
+    seoUrl: "https://example.com",
+    seoImage: "https://example.com/og-image.jpg",
     
     // Home Section
     homeTitle: "Welcome to my Portfolio",
@@ -130,6 +147,15 @@ export const translations = {
   es: {
     // Navbar
     logoName: "Lorenzo Miglietta",
+
+    // SEO
+    seoSiteName: "Lorenzo Miglietta",
+    seoHomeTitle: "Portafolio de Desarrollador Web",
+    seoHomeDescription: "Portafolio de Lorenzo Miglietta, Desarrollador Web Full Stack y Diseñador Web. Proyectos, habilidades y contacto.",
+    seoAboutTitle: "Sobre Mi",
+    seoAboutDescription: "Conoce el perfil de Lorenzo Miglietta, experiencia, habilidades y enfoque de trabajo.",
+    seoUrl: "https://example.com",
+    seoImage: "https://example.com/og-image.jpg",
     
     // Home Section
     homeTitle: "Bienvenido a mi Portafolio",
