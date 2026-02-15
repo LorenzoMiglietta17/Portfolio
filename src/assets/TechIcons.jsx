@@ -1,4 +1,4 @@
-import { SiVscodium, SiLaravel, SiGit, SiHtml5, SiJavascript, SiCss3, SiNodedotjs, SiReact, SiMysql, SiFigma, SiBootstrap, SiTailwindcss, SiPhp } from 'react-icons/si';
+import { SiVscodium, SiLaravel, SiGit, SiGithub, SiHtml5, SiJavascript, SiCss3, SiNodedotjs, SiReact, SiMysql, SiFigma, SiBootstrap, SiTailwindcss, SiPhp, SiNextdotjs, SiVercel, SiWordpress } from 'react-icons/si';
 
 export const icons = [
   {
@@ -18,6 +18,10 @@ export const icons = [
     icon: <SiHtml5 color="#E44D26" />,
   },
   {
+    name: 'GitHub',
+    icon: <SiGithub color="#181717" />,
+  },
+  {
     name: 'JS',
     icon: <SiJavascript color="#F7DF1E" />,
   },
@@ -34,8 +38,16 @@ export const icons = [
     icon: <SiReact color="#61DAFB" />,
   },
   {
+    name: 'Next.js',
+    icon: <SiNextdotjs color="#000000" />,
+  },
+  {
     name: 'MySQL',
     icon: <SiMysql color="#00758F" />,
+  },
+  {
+    name: 'WordPress',
+    icon: <SiWordpress color="#21759B" />,
   },
   {
     name: 'Figma',
@@ -52,5 +64,9 @@ export const icons = [
   {
     name: 'PHP',
     icon: <SiPhp color="#777BB4" />,
+  },
+  {
+    name: 'Vercel',
+    icon: <SiVercel color="#000000" />,
   },
 ];
