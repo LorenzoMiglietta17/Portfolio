@@ -5,7 +5,6 @@ import { useState } from 'react';
 import burger1 from './assets/img/burger1.jpg';
 import burger2 from './assets/img/burger2.jpg';
 import burger3 from './assets/img/burger3.jpg';
-import '@google/model-viewer';
 import { useLanguage } from './context/LanguageContext';
 import { NavLink, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';

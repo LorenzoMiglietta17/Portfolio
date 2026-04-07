@@ -15,8 +15,46 @@ function Home({ t, burgerImages, onBurgerClick }) {
             </span>
           ))}
         </div>
+        <span className="home-badge">{t.homeBadge}</span>
         <h1>{t.homeTitle}</h1>
         <p>{t.homeSubtitle}</p>
+        <div className="hero-cta-row">
+          <a className="hero-cta hero-cta--primary" href="#contact">{t.homeCtaPrimary}</a>
+          <a className="hero-cta hero-cta--secondary" href="#projects">{t.homeCtaSecondary}</a>
+        </div>
+        <div className="hero-stats">
+          <div className="hero-stat">
+            <strong>{t.statDeliveryValue}</strong>
+            <span>{t.statDeliveryLabel}</span>
+          </div>
+          <div className="hero-stat">
+            <strong>{t.statStackValue}</strong>
+            <span>{t.statStackLabel}</span>
+          </div>
+          <div className="hero-stat">
+            <strong>{t.statSupportValue}</strong>
+            <span>{t.statSupportLabel}</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" className="section services-section">
+        <h2>{t.servicesTitle}</h2>
+        <p className="services-intro">{t.servicesIntro}</p>
+        <div className="services-grid">
+          <article className="service-card">
+            <h3>{t.service1Title}</h3>
+            <p>{t.service1Text}</p>
+          </article>
+          <article className="service-card">
+            <h3>{t.service2Title}</h3>
+            <p>{t.service2Text}</p>
+          </article>
+          <article className="service-card">
+            <h3>{t.service3Title}</h3>
+            <p>{t.service3Text}</p>
+          </article>
+        </div>
       </section>
 
       <section id="how-it-works" className="section how-section">
@@ -44,6 +82,10 @@ function Home({ t, burgerImages, onBurgerClick }) {
             <div className="project-header">
               <h3>{t.project1Name}</h3>
               <p className="project-description">{t.project1Description}</p>
+              <div className="project-results">
+                <p>{t.project1Result1}</p>
+                <p>{t.project1Result2}</p>
+              </div>
             </div>
 
             <div className="mac-gallery">
@@ -94,13 +136,13 @@ function Home({ t, burgerImages, onBurgerClick }) {
           <p>{t.socialDescription}</p>
           <div className="social-icons">
             <a href="https://www.linkedin.com/in/lorenzo-miglietta-developer/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" style={{width: '32px', marginRight: '10px'}} />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" style={{width: '32px'}} />
             </a>
             <a href="https://github.com/LorenzoMiglietta17" target="_blank" rel="noopener noreferrer" title="GitHub">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style={{width: '32px', marginRight: '10px'}} />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style={{width: '32px'}} />
             </a>
             <a href="https://www.instagram.com/lorenzomiglietta._/" target="_blank" rel="noopener noreferrer" title="Instagram">
-              <img src="https://simpleicons.org/icons/instagram.svg" alt="Instagram" style={{width: '32px', marginRight: '10px', background: 'white', borderRadius: '8px'}} />
+              <img src="https://simpleicons.org/icons/instagram.svg" alt="Instagram" style={{width: '32px', background: 'white', borderRadius: '8px'}} />
             </a>
           </div>
         </div>

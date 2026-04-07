@@ -12,8 +12,17 @@ export const translations = {
     seoUrl: "https://lmigliettadev.netlify.app",
     
     // Home Section
-    homeTitle: "Benvenuto nel mio Portfolio",
-    homeSubtitle: "Sviluppatore Web Full Stack Certificato | Web Designer",
+    homeBadge: "Freelance Web Developer per business e professionisti",
+    homeTitle: "Siti web moderni che trasformano visite in clienti",
+    homeSubtitle: "Progetto e sviluppo siti performanti, chiari e orientati alla conversione.",
+    homeCtaPrimary: "Richiedi una call gratuita",
+    homeCtaSecondary: "Guarda i progetti",
+    statDeliveryValue: "48h",
+    statDeliveryLabel: "prima proposta",
+    statStackValue: "Full Stack",
+    statStackLabel: "React, Laravel, UX",
+    statSupportValue: "Supporto",
+    statSupportLabel: "post-lancio incluso",
     
     // About Section
     aboutTitle: "Chi sono",
@@ -29,8 +38,27 @@ export const translations = {
     projectsTitle: "Progetti",
     project1Name: "7Burger",
     project1Description: "Un progetto vetrina realizzato con Laravel che mostra il menu e i servizi di un fast food. Realizzato con Laravel 12, HTML5, CSS3 e JavaScript per un'esperienza utente moderna e responsive.",
+    project1Result1: "Obiettivo: presentare menu e servizi con una struttura chiara e mobile-first.",
+    project1Result2: "Risultato: interfaccia piu rapida da consultare e percorso contatto semplificato.",
     project2Name: "Progetto 2",
     project3Name: "Progetto 3",
+
+    // Services Section
+    servicesTitle: "Servizi",
+    servicesIntro: "Pacchetti pensati per freelance, attivita locali e startup che vogliono risultati concreti.",
+    service1Title: "Landing page conversione",
+    service1Text: "Pagina singola ottimizzata per campagne, contatti e richiesta preventivo.",
+    service2Title: "Sito completo professionale",
+    service2Text: "Architettura completa con pagine servizi, portfolio, SEO base e performance.",
+    service3Title: "Restyling e ottimizzazione",
+    service3Text: "Miglioro sito esistente su velocita, UX, copy e call to action per aumentare i lead.",
+
+    // Testimonials Section
+    testimonialsTitle: "Cosa dicono i clienti",
+    testimonial1Text: "Comunicazione veloce, consegna puntuale e sito finalmente chiaro per i miei clienti.",
+    testimonial1Author: "Cliente settore food",
+    testimonial2Text: "Ha trasformato un sito confuso in una vetrina che mi porta richieste ogni settimana.",
+    testimonial2Author: "Libero professionista",
 
     // How It Works Section
     howTitle: "Come funziona",
@@ -85,8 +113,17 @@ export const translations = {
     seoImage: "https://example.com/og-image.jpg",
     
     // Home Section
-    homeTitle: "Welcome to my Portfolio",
-    homeSubtitle: "Certified Full Stack Web Developer | Web Designer",
+    homeBadge: "Freelance Web Developer for businesses and professionals",
+    homeTitle: "Modern websites that turn visitors into clients",
+    homeSubtitle: "I design and develop high-performance websites focused on clarity and conversion.",
+    homeCtaPrimary: "Book a free discovery call",
+    homeCtaSecondary: "View projects",
+    statDeliveryValue: "48h",
+    statDeliveryLabel: "first proposal",
+    statStackValue: "Full Stack",
+    statStackLabel: "React, Laravel, UX",
+    statSupportValue: "Support",
+    statSupportLabel: "post-launch included",
     
     // About Section
     aboutTitle: "About Me",
@@ -102,8 +139,27 @@ export const translations = {
     projectsTitle: "Projects",
     project1Name: "7Burger",
     project1Description: "A showcase project built with Laravel that displays the menu and services of a fast food restaurant. Built with Laravel 12, HTML5, CSS3 and JavaScript for a modern and responsive user experience.",
+    project1Result1: "Goal: present menu and services with a clear mobile-first structure.",
+    project1Result2: "Result: faster browsing experience and an easier contact path.",
     project2Name: "Project 2",
     project3Name: "Project 3",
+
+    // Services Section
+    servicesTitle: "Services",
+    servicesIntro: "Packages designed for freelancers, local businesses and startups looking for real outcomes.",
+    service1Title: "Conversion landing page",
+    service1Text: "Single page optimized for campaigns, inquiries and quote requests.",
+    service2Title: "Professional full website",
+    service2Text: "Complete structure with service pages, portfolio, basic SEO and performance.",
+    service3Title: "Redesign and optimization",
+    service3Text: "I improve your existing website in speed, UX, copy and calls to action.",
+
+    // Testimonials Section
+    testimonialsTitle: "What clients say",
+    testimonial1Text: "Fast communication, on-time delivery, and a website that finally speaks to my customers.",
+    testimonial1Author: "Client in food business",
+    testimonial2Text: "He turned a confusing site into a showcase that brings me weekly leads.",
+    testimonial2Author: "Freelance professional",
 
     // How It Works Section
     howTitle: "How it works",
@@ -158,8 +214,17 @@ export const translations = {
     seoImage: "https://example.com/og-image.jpg",
     
     // Home Section
-    homeTitle: "Bienvenido a mi Portafolio",
-    homeSubtitle: "Desarrollador Web Full Stack Certificado | Diseñador Web",
+    homeBadge: "Freelance Web Developer para negocios y profesionales",
+    homeTitle: "Sitios web modernos que convierten visitas en clientes",
+    homeSubtitle: "Diseno y desarrollo sitios rapidos, claros y enfocados en conversion.",
+    homeCtaPrimary: "Reserva una llamada gratuita",
+    homeCtaSecondary: "Ver proyectos",
+    statDeliveryValue: "48h",
+    statDeliveryLabel: "primera propuesta",
+    statStackValue: "Full Stack",
+    statStackLabel: "React, Laravel, UX",
+    statSupportValue: "Soporte",
+    statSupportLabel: "post-lanzamiento incluido",
     
     // About Section
     aboutTitle: "Sobre Mí",
@@ -175,8 +240,27 @@ export const translations = {
     projectsTitle: "Proyectos",
     project1Name: "7Burger",
     project1Description: "Un proyecto de escaparate construido con Laravel que muestra el menú y servicios de un restaurante de comida rápida. Construido con Laravel 12, HTML5, CSS3 y JavaScript para una experiencia de usuario moderna y responsive.",
+    project1Result1: "Objetivo: presentar menu y servicios con estructura clara y mobile-first.",
+    project1Result2: "Resultado: navegacion mas rapida y contacto mas simple.",
     project2Name: "Proyecto 2",
     project3Name: "Proyecto 3",
+
+    // Services Section
+    servicesTitle: "Servicios",
+    servicesIntro: "Paquetes pensados para freelancers, negocios locales y startups que buscan resultados reales.",
+    service1Title: "Landing page de conversion",
+    service1Text: "Pagina unica optimizada para campanas, contactos y solicitudes de presupuesto.",
+    service2Title: "Sitio web profesional completo",
+    service2Text: "Estructura completa con paginas de servicios, portfolio, SEO base y rendimiento.",
+    service3Title: "Rediseno y optimizacion",
+    service3Text: "Mejoro tu sitio actual en velocidad, UX, copy y llamadas a la accion.",
+
+    // Testimonials Section
+    testimonialsTitle: "Lo que dicen los clientes",
+    testimonial1Text: "Comunicacion rapida, entrega puntual y un sitio que por fin habla a mis clientes.",
+    testimonial1Author: "Cliente del sector food",
+    testimonial2Text: "Convirtio un sitio confuso en una vitrina que me genera leads cada semana.",
+    testimonial2Author: "Profesional independiente",
 
     // How It Works Section
     howTitle: "Cómo funciona",
