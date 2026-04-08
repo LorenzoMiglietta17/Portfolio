@@ -450,8 +450,6 @@
 
 .about-manifesto-card::before,
 .services-highlight-card::before,
-.value-card::before,
-.process-step-card::before,
 .project-card::before,
 .contact-trust-card::before {
   content: '';
@@ -1399,11 +1397,12 @@ body {
 .value-card,
 .process-step-card {
   display: grid;
-  gap: 10px;
-  padding: 18px;
-  border-radius: 18px;
+  gap: 14px;
+  padding: 16px 18px;
+  border-radius: 12px;
   background: rgba(8, 17, 34, 0.9);
-  border: 1px solid rgba(103, 200, 255, 0.16);
+  border: 1px solid rgba(103, 200, 255, 0.18);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
 }
 
 .value-index,
@@ -2076,7 +2075,7 @@ video {
   .hero-stage::after { width: 430px; height: 430px; }
   .hero-stage-glow--blue { width: 220px; height: 220px; }
   .hero-stage-glow--lime { width: 180px; height: 180px; }
-  .hero-orbit { width: 98px; height: 98px; }
+  .hero-orbit { width: 84px; height: 84px; }
   .hero-orbit--1 { top: 4%; left: 12%; }
   .hero-orbit--2 { top: 10%; right: 10%; }
   .hero-orbit--3 { top: 32%; left: 0; }
@@ -2086,9 +2085,9 @@ video {
   .hero-orbit--7 { bottom: 2%; left: 22%; }
   .hero-orbit--8 { bottom: 2%; right: 22%; }
   .hero-orbit--9 { top: 0; left: 50%; translate: -50% 0; }
-  .hero-orbit-icon { width: 42px; height: 42px; }
-  .hero-orbit-icon svg { width: 30px; height: 30px; }
-  .hero-orbit-label { font-size: 0.78rem; top: calc(100% + 8px); padding: 0.34rem 0.7rem; }
+  .hero-orbit-icon { width: 34px; height: 34px; }
+  .hero-orbit-icon svg { width: 24px; height: 24px; }
+  .hero-orbit-label { font-size: 0.72rem; top: calc(100% + 6px); padding: 0.28rem 0.58rem; }
   .hero-stats { grid-template-columns: 1fr; width: min(100%, 620px); max-width: 100%; gap: 16px; }
   .hero-stat { width: 100%; padding: 20px 18px; min-height: 112px; border-radius: 18px; }
   .hero-stat strong { font-size: 1.18rem; }
@@ -2136,7 +2135,7 @@ video {
   .hero-stage::after { width: 300px; height: 300px; }
   .hero-stage-glow--blue { width: 160px; height: 160px; left: 10%; }
   .hero-stage-glow--lime { width: 130px; height: 130px; right: 10%; }
-  .hero-orbit { width: 84px; height: 84px; }
+  .hero-orbit { width: 72px; height: 72px; }
   .hero-orbit--1 { top: 0; left: 8%; }
   .hero-orbit--2 { top: 8%; right: 6%; }
   .hero-orbit--3 { top: 34%; left: -2%; }
@@ -2146,9 +2145,9 @@ video {
   .hero-orbit--7 { bottom: 0; left: 16%; }
   .hero-orbit--8 { bottom: 0; right: 16%; }
   .hero-orbit--9 { top: -2%; left: 50%; translate: -50% 0; }
-  .hero-orbit-icon { width: 34px; height: 34px; }
-  .hero-orbit-icon svg { width: 24px; height: 24px; }
-  .hero-orbit-label { font-size: 0.72rem; top: calc(100% + 6px); padding: 0.3rem 0.58rem; }
+  .hero-orbit-icon { width: 28px; height: 28px; }
+  .hero-orbit-icon svg { width: 20px; height: 20px; }
+  .hero-orbit-label { font-size: 0.66rem; top: calc(100% + 5px); padding: 0.24rem 0.48rem; }
   .hero-stat { width: 100%; padding: 18px 16px; min-height: 110px; border-radius: 16px; }
   .hero-stat strong { font-size: 1.16rem; }
   .hero-stat span { font-size: 1rem; }
