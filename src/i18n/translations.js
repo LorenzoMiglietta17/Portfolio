@@ -10,7 +10,7 @@ export const translations = {
     seoHomeDescription: "Miglio Web Dev Innovative Digital Solutions, Full Stack Web Developer e Web Designer. Progetti, competenze e contatti.",
     seoAboutTitle: "Chi sono",
     seoAboutDescription: "Scopri il profilo di Lorenzo Miglietta, esperienza, competenze e approccio al lavoro.",
-    seoUrl: "https://lmigliettadev.netlify.app",
+    seoUrl: "https://migliowebdev.netlify.app",
     
     // Home Section
     homeBadge: "Freelance Web Developer per business e professionisti",
