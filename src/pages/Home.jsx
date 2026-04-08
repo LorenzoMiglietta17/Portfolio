@@ -1,164 +1,123 @@
+import { Link } from 'react-router-dom';
 import { icons } from '../assets/TechIcons';
+import siteLogo from '../assets/img/logo.jpg';
 
-function Home({ t, burgerImages, onBurgerClick }) {
+function Home({ t }) {
+  const trustItems = [t.heroTrust1, t.heroTrust2, t.heroTrust3];
+  const orbitTools = icons.slice(0, 9);
+  const valueCards = [
+    {
+      id: '01',
+      title: t.value1Title,
+      text: t.value1Text,
+    },
+    {
+      id: '02',
+      title: t.value2Title,
+      text: t.value2Text,
+    },
+    {
+      id: '03',
+      title: t.value3Title,
+      text: t.value3Text,
+    },
+  ];
+  const processSteps = [
+    {
+      step: t.processStep1Label,
+      title: t.processStep1Title,
+      text: t.processStep1Text,
+    },
+    {
+      step: t.processStep2Label,
+      title: t.processStep2Title,
+      text: t.processStep2Text,
+    },
+    {
+      step: t.processStep3Label,
+      title: t.processStep3Title,
+      text: t.processStep3Text,
+    },
+  ];
   return (
     <>
       <section id="home" className="section home-section">
-        <div className="home-name logo logo-3d">
-          {t.logoName.split("").map((char, i) => (
-            <span
-              key={i}
-              className={`logo-letter${char === " " ? " logo-break" : ""}`}
-              style={{ animationDelay: `${i * 0.08 + 0.2}s` }}
-            >
-              {char === " " ? "\u00A0" : char}
-            </span>
-          ))}
-        </div>
-        <span className="home-badge">{t.homeBadge}</span>
-        <h1>{t.homeTitle}</h1>
-        <p>{t.homeSubtitle}</p>
-        <div className="hero-cta-row">
-          <a className="hero-cta hero-cta--primary" href="#contact">{t.homeCtaPrimary}</a>
-          <a className="hero-cta hero-cta--secondary" href="#projects">{t.homeCtaSecondary}</a>
-        </div>
-        <div className="hero-stats">
-          <div className="hero-stat">
-            <strong>{t.statDeliveryValue}</strong>
-            <span>{t.statDeliveryLabel}</span>
-          </div>
-          <div className="hero-stat">
-            <strong>{t.statStackValue}</strong>
-            <span>{t.statStackLabel}</span>
-          </div>
-          <div className="hero-stat">
-            <strong>{t.statSupportValue}</strong>
-            <span>{t.statSupportLabel}</span>
-          </div>
-        </div>
-      </section>
+        <div className="hero-shell hero-shell--impact">
+          <span className="hero-badge-large">{t.homeBadge}</span>
+          <h1>{t.homeTitle}</h1>
+          <p className="hero-subtitle-large">{t.homeSubtitle}</p>
 
-      <section id="services" className="section services-section">
-        <h2>{t.servicesTitle}</h2>
-        <p className="services-intro">{t.servicesIntro}</p>
-        <div className="services-grid">
-          <article className="service-card">
-            <h3>{t.service1Title}</h3>
-            <p>{t.service1Text}</p>
-          </article>
-          <article className="service-card">
-            <h3>{t.service2Title}</h3>
-            <p>{t.service2Text}</p>
-          </article>
-          <article className="service-card">
-            <h3>{t.service3Title}</h3>
-            <p>{t.service3Text}</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="how-it-works" className="section how-section">
-        <h2><span className="how-title-badge">{t.howTitle}</span></h2>
-        <div className="how-list">
-          <div className="how-item">
-            <h3>{t.howPoint1Title}</h3>
-            <p>{t.howPoint1Text}</p>
-          </div>
-          <div className="how-item">
-            <h3>{t.howPoint2Title}</h3>
-            <p>{t.howPoint2Text}</p>
-          </div>
-          <div className="how-item">
-            <h3>{t.howPoint3Title}</h3>
-            <p>{t.howPoint3Text}</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" className="section projects-section">
-        <h2>{t.projectsTitle}</h2>
-        <div className="projects-wrapper">
-          <div className="project-card">
-            <div className="project-header">
-              <h3>{t.project1Name}</h3>
-              <p className="project-description">{t.project1Description}</p>
-              <div className="project-results">
-                <p>{t.project1Result1}</p>
-                <p>{t.project1Result2}</p>
-              </div>
+          <div className="hero-stage">
+            <div className="hero-stage-glow hero-stage-glow--blue"></div>
+            <div className="hero-stage-glow hero-stage-glow--lime"></div>
+            <div className="hero-stage-core">
+              <img src={siteLogo} alt="Miglio Web logo" className="hero-stage-logo" />
             </div>
-
-            <div className="mac-gallery">
-              {burgerImages.map((img, idx) => (
-                <button
-                  key={img}
-                  type="button"
-                  className="mac-shot"
-                  onClick={() => onBurgerClick(idx + 1)}
-                  aria-label={`Apri immagine progetto ${idx + 1}`}
-                >
-                  <div className="mac-window">
-                    <div className="mac-toolbar">
-                      <span className="mac-dot mac-dot--red"></span>
-                      <span className="mac-dot mac-dot--yellow"></span>
-                      <span className="mac-dot mac-dot--green"></span>
-                      <span className="mac-title">macOS Preview</span>
-                    </div>
-                    <div className="mac-screen">
-                      <img src={img} alt={`Burger ${idx + 1}`} className="mac-image" />
-                    </div>
-                  </div>
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" className="section contact-section">
-        <h2>{t.contactTitle}</h2>
-        <p>{t.contactIntro}</p>
-
-        <div className="contact-methods">
-          <div className="contact-item">
-            <h3>{t.contactEmail}</h3>
-            <p><a href="mailto:migliolory29@gmail.com">migliolory29@gmail.com</a></p>
-          </div>
-
-          <div className="contact-item">
-            <h3>{t.contactPhone}</h3>
-            <p><a href="tel:+393339794245">+39 333 97 94 245</a></p>
-          </div>
-        </div>
-
-        <div className="social-section">
-          <h3>{t.socialTitle}</h3>
-          <p>{t.socialDescription}</p>
-          <div className="social-icons">
-            <a href="https://www.linkedin.com/in/lorenzo-miglietta-developer/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" style={{width: '32px'}} />
-            </a>
-            <a href="https://github.com/LorenzoMiglietta17" target="_blank" rel="noopener noreferrer" title="GitHub">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style={{width: '32px'}} />
-            </a>
-            <a href="https://www.instagram.com/lorenzomiglietta._/" target="_blank" rel="noopener noreferrer" title="Instagram">
-              <img src="https://simpleicons.org/icons/instagram.svg" alt="Instagram" style={{width: '32px', background: 'white', borderRadius: '8px'}} />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section className="tech-scroll-section">
-        <h2 className="tech-section-title">{t.techTitle}</h2>
-        <div className="tech-scroll-wrapper">
-          <div className="tech-scroll">
-            {icons.concat(icons).map((icon, i) => (
-              <div className="tech-icon" key={i} title={icon.name}>
-                {icon.icon}
-                <span className="tech-label">{icon.name}</span>
+            {orbitTools.map((tool, index) => (
+              <div key={tool.name} className={`hero-orbit hero-orbit--${index + 1}`}>
+                <span className="hero-orbit-icon">{tool.icon}</span>
+                <span className="hero-orbit-label">{tool.name}</span>
               </div>
             ))}
           </div>
+
+          <div className="hero-cta-row">
+            <Link className="hero-cta hero-cta--primary" to="/contact">{t.homeCtaPrimary}</Link>
+            <Link className="hero-cta hero-cta--secondary" to="/projects">{t.homeCtaSecondary}</Link>
+          </div>
+          <div className="hero-stats">
+            <div className="hero-stat">
+              <strong>{t.statDeliveryValue}</strong>
+              <span>{t.statDeliveryLabel}</span>
+            </div>
+            <div className="hero-stat">
+              <strong>{t.statStackValue}</strong>
+              <span>{t.statStackLabel}</span>
+            </div>
+            <div className="hero-stat">
+              <strong>{t.statSupportValue}</strong>
+              <span>{t.statSupportLabel}</span>
+            </div>
+          </div>
+          <div className="hero-trust-row">
+            {trustItems.map((item) => (
+              <span key={item} className="hero-trust-chip">{item}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="value" className="section value-section">
+        <div className="section-heading">
+          <span className="section-kicker">{t.valueKicker}</span>
+          <h2>{t.valueTitle}</h2>
+          <p>{t.valueIntro}</p>
+        </div>
+        <div className="value-grid">
+          {valueCards.map((card) => (
+            <article key={card.id} className="value-card">
+              <span className="value-index">{card.id}</span>
+              <h3>{card.title}</h3>
+              <p>{card.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="process" className="section process-section">
+        <div className="section-heading">
+          <span className="section-kicker">{t.processKicker}</span>
+          <h2>{t.processTitle}</h2>
+          <p>{t.processIntro}</p>
+        </div>
+        <div className="process-timeline">
+          {processSteps.map((item) => (
+            <article key={item.step} className="process-step-card">
+              <span className="process-step-label">{item.step}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
         </div>
       </section>
     </>

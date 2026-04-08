@@ -5,7 +5,7 @@
 
   color-scheme: dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #050908;
+  background-color: #020304;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,15 +24,21 @@ body,
 #root {
   max-width: 100%;
   overflow-x: hidden;
+  overflow-y: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
 }
 
 a {
   font-weight: 500;
-  color: #1de9c3;
+  color: #67c8ff;
   text-decoration: inherit;
 }
 a:hover {
-  color: #14c8a8;
+  color: #b8ea29;
 }
 
 body {
@@ -40,6 +46,32 @@ body {
   min-width: 320px;
   min-height: 100dvh;
   width: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(103, 200, 255, 0.55) rgba(6, 11, 18, 0.9);
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(6, 11, 18, 0.92);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(103, 200, 255, 0.8), rgba(47, 103, 191, 0.82));
+  border-radius: 999px;
+  border: 2px solid rgba(6, 11, 18, 0.92);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(184, 234, 41, 0.92), rgba(103, 200, 255, 0.82));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 h1 {
@@ -54,12 +86,12 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #0b1730;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #1de9c3;
+  border-color: #67c8ff;
 }
 button:focus,
 button:focus-visible {
@@ -69,12 +101,12 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #f1fffc;
-    background-color: #000000;
+    background-color: #020304;
   }
   a:hover {
-    color: #14c8a8;
+    color: #b8ea29;
   }
   button {
-    background-color: #050707;
+    background-color: #0b1730;
   }
 }
