@@ -1022,6 +1022,15 @@
     display: flex;
   }
 
+  .hero {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .hero-eyebrow {
+    justify-content: flex-start;
+  }
+
   .hero-footer {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -1030,6 +1039,7 @@
 
   .hero-stats {
     gap: 20px;
+    flex-wrap: wrap;
   }
 
   .about-grid {
@@ -1062,7 +1072,8 @@
   }
 
   .contact-display {
-    font-size: clamp(3rem, 13vw, 5rem);
+    font-size: clamp(2.4rem, 10vw, 4rem);
+    letter-spacing: -0.02em;
   }
 
   .contact-layout {
@@ -1094,7 +1105,21 @@
   }
 
   .hero-name {
-    font-size: clamp(3.8rem, 14vw, 5.5rem);
+    font-size: clamp(3rem, 13vw, 4.5rem);
+    letter-spacing: -0.02em;
+  }
+
+  .about-headline {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+
+  .services-headline {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+
+  .contact-display {
+    font-size: clamp(2rem, 9vw, 3rem);
+    letter-spacing: -0.02em;
   }
 }
 
