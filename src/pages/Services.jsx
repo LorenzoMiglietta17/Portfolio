@@ -1,38 +1,29 @@
 import { LuLayoutTemplate, LuMonitorSmartphone, LuSparkles } from 'react-icons/lu';
 
-function Services({ t }) {
+function Services({ t, id }) {
   const serviceHighlights = [
-    {
-      title: t.servicesHighlight1Title,
-      text: t.servicesHighlight1Text,
-    },
-    {
-      title: t.servicesHighlight2Title,
-      text: t.servicesHighlight2Text,
-    },
-    {
-      title: t.servicesHighlight3Title,
-      text: t.servicesHighlight3Text,
-    },
+    { title: t.servicesHighlight1Title, text: t.servicesHighlight1Text },
+    { title: t.servicesHighlight2Title, text: t.servicesHighlight2Text },
+    { title: t.servicesHighlight3Title, text: t.servicesHighlight3Text },
   ];
 
   const serviceCards = [
     {
-      icon: LuLayoutTemplate,
+      Icon: LuLayoutTemplate,
       badge: t.service1Badge,
       title: t.service1Title,
       text: t.service1Text,
       note: t.service1Note,
     },
     {
-      icon: LuMonitorSmartphone,
+      Icon: LuMonitorSmartphone,
       badge: t.service2Badge,
       title: t.service2Title,
       text: t.service2Text,
       note: t.service2Note,
     },
     {
-      icon: LuSparkles,
+      Icon: LuSparkles,
       badge: t.service3Badge,
       title: t.service3Title,
       text: t.service3Text,
@@ -41,16 +32,16 @@ function Services({ t }) {
   ];
 
   return (
-    <section className="section services-section services-page">
-      <div className="section-heading">
-        <span className="section-kicker">{t.servicesKicker}</span>
+    <section id={id} className="section services-page">
+      <div className="section-head">
+        <span className="kicker">{t.servicesKicker}</span>
         <h2>{t.servicesTitle}</h2>
-        <p>{t.servicesIntro}</p>
+        <p className="section-intro">{t.servicesIntro}</p>
       </div>
 
-      <div className="services-highlight-row">
+      <div className="services-intro-row">
         {serviceHighlights.map((item) => (
-          <article key={item.title} className="services-highlight-card">
+          <article key={item.title} className="services-intro-card">
             <h3>{item.title}</h3>
             <p>{item.text}</p>
           </article>
@@ -59,16 +50,14 @@ function Services({ t }) {
 
       <div className="services-grid">
         {serviceCards.map((service) => (
-          <article key={service.title} className="service-card corporate-service-card">
-            <div className="service-card-top">
-              <span className="service-icon-badge" aria-hidden="true">
-                <service.icon />
-              </span>
-              <span className="service-pill">{service.badge}</span>
+          <article key={service.title} className="service-card-new">
+            <div className="service-icon-wrap">
+              <service.Icon />
             </div>
+            <span className="service-pill-new">{service.badge}</span>
             <h3>{service.title}</h3>
             <p>{service.text}</p>
-            <div className="service-card-note">{service.note}</div>
+            {service.note && <p className="service-note-new">{service.note}</p>}
           </article>
         ))}
       </div>
