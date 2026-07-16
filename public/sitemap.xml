@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://portfolio-lorenzo-migliettas-projects.vercel.app/</loc>
+    <loc>https://miglioweb.com/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://portfolio-lorenzo-migliettas-projects.vercel.app/services</loc>
+    <loc>https://miglioweb.com/services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://portfolio-lorenzo-migliettas-projects.vercel.app/projects</loc>
+    <loc>https://miglioweb.com/projects</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://portfolio-lorenzo-migliettas-projects.vercel.app/contact</loc>
+    <loc>https://miglioweb.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://portfolio-lorenzo-migliettas-projects.vercel.app/about</loc>
+    <loc>https://miglioweb.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

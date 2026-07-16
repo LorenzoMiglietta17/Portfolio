@@ -1,5 +1,5 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://portfolio-lorenzo-migliettas-projects.vercel.app/sitemap.xml
+Sitemap: https://miglioweb.com/sitemap.xml
 
