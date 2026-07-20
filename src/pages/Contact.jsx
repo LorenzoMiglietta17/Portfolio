@@ -16,7 +16,7 @@ function Contact({ t, id }) {
     setSubmitState('submitting');
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/migliolory29@gmail.com', {
+      const response = await fetch('https://formsubmit.co/ajax/infomiglioweb@gmail.com', {
         method: 'POST',
         headers: { Accept: 'application/json' },
         body: formData,
@@ -131,11 +131,11 @@ function Contact({ t, id }) {
           </div>
 
           <div className="contact-methods-new">
-            <a href="mailto:migliolory29@gmail.com" className="contact-method-item">
+            <a href="mailto:infomiglioweb@gmail.com" className="contact-method-item">
               <span className="contact-method-icon">📧</span>
               <div className="contact-method-text">
                 <strong>Email</strong>
-                <span>migliolory29@gmail.com</span>
+                <span>infomiglioweb@gmail.com</span>
               </div>
             </a>
             <a href="tel:+393339794245" className="contact-method-item">

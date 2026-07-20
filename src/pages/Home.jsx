@@ -18,7 +18,7 @@ function Home({ t }) {
     const form = e.currentTarget;
     setSubmitState('submitting');
     try {
-      const res = await fetch('https://formsubmit.co/ajax/migliolory29@gmail.com', {
+      const res = await fetch('https://formsubmit.co/ajax/infomiglioweb@gmail.com', {
         method: 'POST',
         headers: { Accept: 'application/json' },
         body: new FormData(form),
@@ -141,9 +141,9 @@ function Home({ t }) {
           <Reveal delay={80} className="contact-info-col">
             <p className="contact-info-lead">{t.contactIntro}</p>
             <div className="contact-methods">
-              <a href="mailto:migliolory29@gmail.com" className="contact-method-link">
+              <a href="mailto:infomiglioweb@gmail.com" className="contact-method-link">
                 <span className="contact-method-icon">✉</span>
-                migliolory29@gmail.com
+                infomiglioweb@gmail.com
               </a>
               <a href="tel:+393339794245" className="contact-method-link">
                 <span className="contact-method-icon">☎</span>
