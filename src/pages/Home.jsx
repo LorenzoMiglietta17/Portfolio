@@ -165,6 +165,8 @@ function Home({ t }) {
           <Reveal delay={160}>
             <form className="contact-form" onSubmit={handleSubmit}>
               <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_subject" value="Nuova richiesta dal sito Miglio Web" />
+              <input type="hidden" name="_template" value="https://miglioweb.com/email-template.html" />
               <div className="form-row">
                 <label className="form-field">
                   <span>{t.formNameLabel}</span>
